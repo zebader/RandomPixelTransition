@@ -52,12 +52,14 @@ img.src = './img/logan.jpg';
 // On img load create function
 img.onload = function() {
 
-  const body = document.querySelector('body')
-  const container = document.createElement("div")
-  container.classList.add('container')
+  const body = document.querySelector('body');
+  const container = document.createElement("div");
+
+  container.classList.add('container');
   container.style.width = (this.width).toString()+"px";
   container.style.height = (this.height).toString()+"px";
   body.appendChild(container);
+
   for(i=0;i<this.height / 20;i++){
     for(j=0;j<this.width / 20;j++){
       const cell = document.createElement("div");
@@ -66,24 +68,14 @@ img.onload = function() {
       container.appendChild(cell);
     }
   }
-  const allCells = document.querySelectorAll('div')
+  const allCells = document.querySelectorAll('div');
   
   setInterval(() => {
-    const random = Math.floor(Math.random()*allCells.length) + 1
-    allCells[random].classList.add('animation')
+    const random = Math.floor(Math.random()*allCells.length) + 1;
+    allCells[random].classList.add('animation');
   }, 10);
 
 }
-
-
-
-
-
-
-
-
-
-
 </script>
 </body>
 </html>
