@@ -28,7 +28,7 @@ body{
   display: inline-block;
 }
 .animation{
-  animation: animation 1s ease-out;
+  animation: animation 2s ease-out;
   z-index: 2;
   opacity: 0;
 }
@@ -36,10 +36,29 @@ body{
   0% {
     opacity: 1;
   }
+  5%{
+    transform: translate(5px,5px)
+  }
+  10%{
+    transform: translate(-3px,0px) scale(0.5)
+  }
+  15%{
+    transform: translate(6px,-4px)
+  }
+  20%{
+    transform: translate(5px,5px) scale(2)
+  }
+  25%{
+    transform: translate(-3px,0px);
+  }
+  30%{
+    transform: translate(6px,-4px)
+  }
   100% {
     opacity: 0;
     transform: translateY(-100px) rotate(360deg) scale(0);
     border-radius: 50%;
+    
   }
 }
 </style>
