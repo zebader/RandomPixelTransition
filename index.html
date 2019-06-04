@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hundredhovers-Xperiment</title>
+<style>
+div{
+  height: 20px;
+  background: url('./img/logan.jpg');
+  transition:all 100ms;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+div:hover{
+  transform: scale(0.5);
+}
+.animation{
+  animation: animation 500ms;
+}
+@keyframes animation {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+</style>
+</head>
+<body>
+<script>
+// Create object img and get width and height in pixels  
+const img = new Image();
+img.src = './img/logan.jpg';
+// On img load create function
+img.onload = function() {
+
+  const body = document.querySelector('body')
+  for(i=0;i<this.height/20;i++){
+
+    let cell = document.createElement("div");
+      cell.style.width = (this.width).toString()+"px";
+      cell.style.backgroundPositionY = (-i*20)+"px";
+      body.appendChild(cell);
+
+  }
+}
+
+
+
+
+
+</script>
+</body>
+</html>
