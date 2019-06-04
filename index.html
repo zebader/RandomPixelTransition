@@ -15,7 +15,7 @@ body{
     background: url('./img/logan-skull.jpg');
     position: relative;
     margin: 0 auto;
-    border: 2px solid grey;
+    border: 5px solid grey;
     border-radius: 20px;
     overflow: hidden;
   }
@@ -28,10 +28,9 @@ body{
   display: inline-block;
 }
 .animation{
-  animation: animation 500ms;
+  animation: animation 1s ease-out;
   z-index: 2;
   opacity: 0;
-  border-radius: 50%;
 }
 @keyframes animation {
   0% {
@@ -39,6 +38,8 @@ body{
   }
   100% {
     opacity: 0;
+    transform: translateY(-100px) rotate(360deg) scale(0);
+    border-radius: 50%;
   }
 }
 </style>
